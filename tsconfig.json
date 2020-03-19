@@ -1,11 +1,8 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": "./src/", // This line is needed for import paths to start at a specified origin path
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -20,6 +17,8 @@
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src",
+    "src/**/*", //This line needs to be added in order to import newly created components without reloading the IDE
+    "font.d.ts" // Any *.d.ts file created needs to be added here
   ]
 }
