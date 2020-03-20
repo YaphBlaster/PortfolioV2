@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import styled from 'styled-components/macro';
 import GlobalFonts from './fonts/fonts';
 import Home from 'containers/Home/Home';
-import { persistor } from './Redux/store';
+import OldSchoolHome from 'containers/OldSchoolHome/OldSchoolHome';
 const Regular = styled.div`
   font-family: 'Custom Font Regular';
 `;
@@ -18,25 +18,28 @@ const Bold = styled.div`
 
 const AppStyled = styled.div`
   font-family: 'Custom Font Regular';
+  overflow: hidden;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
 `;
 
 function App() {
-  useEffect(() => {
-    persistor.purge();
-    return () => {
-      persistor.flush();
-    };
-  }, []);
   return (
     <>
       <GlobalFonts />
       <AppStyled>
-        <header className='App-header'>
-          <Regular>Yaphet Abraha</Regular>
-          <Medium>Yaphet Abraha</Medium>
-          <Bold>Yaphet Abraha</Bold>
-          <Home />
-        </header>
+        <OldSchoolHome />
+        <Home />
+        <Regular>Yaphet Abraha</Regular>
+        <Medium>Yaphet Abraha</Medium>
+        <Bold>Yaphet Abraha</Bold>
       </AppStyled>
     </>
   );
