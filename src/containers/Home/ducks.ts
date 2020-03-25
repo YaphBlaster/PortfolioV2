@@ -4,6 +4,7 @@ import { MainState, StoreState } from 'models/reduxState';
 const CHANGE_VALUE = 'CHANGE_VALUE';
 const SET_HAS_VISITED = 'SET_HAS_VISITED';
 
+//INITIAL STATE
 const initialState: MainState = {
   value: 0,
   hasVisited: false

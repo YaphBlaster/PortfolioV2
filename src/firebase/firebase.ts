@@ -1,7 +1,8 @@
 import firebase from 'firebase';
+import { firebaseApiKey } from '../data/keys';
 
 const config = {
-  apiKey: 'AIzaSyDGhCK-aKaMyoWp7lUKCFd8t-QmQYpOAY0',
+  apiKey: firebaseApiKey,
   authDomain: 'portfolio-44239.firebaseapp.com',
   databaseURL: 'https://portfolio-44239.firebaseio.com',
   projectId: 'portfolio-44239',
