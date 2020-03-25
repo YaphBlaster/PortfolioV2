@@ -47,7 +47,7 @@ interface SetMode {
 
 interface SetHasVisited {
   type: typeof SET_HAS_VISITED;
-  payload: boolean | undefined;
+  payload?: boolean;
 }
 
 // ACTION TYPES
@@ -61,9 +61,7 @@ export const changeValue = (payload: string): ModeActionTypes => {
   };
 };
 
-export const setHasVisited = (
-  payload: boolean | undefined
-): ModeActionTypes => {
+export const setHasVisited = (payload?: boolean): ModeActionTypes => {
   return {
     type: SET_HAS_VISITED,
     payload

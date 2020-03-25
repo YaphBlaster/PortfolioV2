@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import firebase from '../../firebase/firebase';
-import { HitCount } from 'models/models';
-import { useFetchHitCount } from './hooks';
+import { useSetupHitCounter } from './hooks';
 
 interface Props {}
 
 const HitCounter = (props: Props) => {
-  const fetchHitCount = useFetchHitCount();
-  const [hitCount, setHitCount] = useState<number>();
+  const [hitCount, setHitCount] = useState<number>(0);
+  const setupHitCounter = useSetupHitCounter();
 
   useEffect(() => {
     const fetchData = async () => {
-      setHitCount(await fetchHitCount());
+      setHitCount(await setupHitCounter());
     };
+
     fetchData();
-  }, []);
+  }, [setupHitCounter]);
 
   return <div>{hitCount}</div>;
 };
