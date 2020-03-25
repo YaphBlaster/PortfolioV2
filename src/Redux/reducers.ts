@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { reducer as mode } from '../containers/Home/ducks';
+import { reducer as main } from '../containers/Home/ducks';
 
 const appReducer = combineReducers({
-  mode
+  main
 });
 
 const rootReducer = (state: any, action: any) => {

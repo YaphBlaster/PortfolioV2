@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import styled from 'styled-components/macro';
 import GlobalFonts from './fonts/fonts';
-import Home from 'containers/Home/Home';
-import OldSchoolHome from 'containers/OldSchoolHome/OldSchoolHome';
+import Home from 'containers/Home/HomeToday/Home';
+import HomeOldSchool from 'containers/Home/HomeOldSchool/HomeOldSchool';
 const Regular = styled.div`
   font-family: 'Custom Font Regular';
 `;
@@ -35,7 +35,7 @@ function App() {
     <>
       <GlobalFonts />
       <AppStyled>
-        <OldSchoolHome />
+        <HomeOldSchool />
         <Home />
         <Regular>Yaphet Abraha</Regular>
         <Medium>Yaphet Abraha</Medium>
